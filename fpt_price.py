@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 # For example, running this (by clicking run or pressing Shift+Enter) will list the files in the input directory
 
 import os
-print(os.listdir("/content/drive/MyDrive/FPT"))
+print(os.listdir("E:/FPT/FPT/"))
 
-dataset_train = pd.read_csv("/content/drive/MyDrive/FPT/newfpttrain.csv")
+dataset_train = pd.read_csv("E:/FPT/FPT/newfpttrain.csv")  
 
 dataset_train
 
@@ -61,7 +61,7 @@ regressor.compile(optimizer = 'adam',loss = 'mean_squared_error')
 
 regressor.fit(x_train,y_train,epochs = 100, batch_size = 32)
 
-dataset_test =pd.read_csv("/content/drive/MyDrive/FPT/fpt-test.csv")
+dataset_test =pd.read_csv("E:/FPT/FPT/fpt-test.csv")
 
 real_stock_price = dataset_test.iloc[:,1:2].values
 
